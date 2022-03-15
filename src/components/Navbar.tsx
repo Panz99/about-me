@@ -1,15 +1,62 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Menu } from "semantic-ui-react";
+import LanguageSelector from "./LanguageSelector";
+import { Link } from "react-scroll";
 
 export default function Navbar() {
   const { t } = useTranslation();
   return (
-    <Menu stackable fixed="top">
-      <Menu.Item>{t("home")}</Menu.Item>
-      <Menu.Item>{t("projects")}</Menu.Item>
-      <Menu.Item>{t("experience")}</Menu.Item>
-      <Menu.Item>{t("contacts")}</Menu.Item>
+    <Menu id="navbar" fixed="top" secondary>
+      <Menu.Item>
+        <Link
+          to="home"
+          activeClass="active"
+          duration={200}
+          containerId="content"
+          smooth={true}
+          spy={true}
+        >
+          {t("home")}
+        </Link>
+      </Menu.Item>
+      <Menu.Item>
+        <Link
+          to="projects"
+          activeClass="active"
+          duration={200}
+          containerId="content"
+          smooth={true}
+          spy={true}
+        >
+          {t("projects")}
+        </Link>
+      </Menu.Item>
+      <Menu.Item>
+        <Link
+          to="experiences"
+          activeClass="active"
+          duration={200}
+          containerId="content"
+          smooth={true}
+          spy={true}
+        >
+          {t("experience")}
+        </Link>
+      </Menu.Item>
+      <Menu.Item>
+        <Link
+          to="contacts"
+          activeClass="active"
+          duration={200}
+          containerId="content"
+          smooth={true}
+          spy={true}
+        >
+          {t("contacts")}
+        </Link>
+      </Menu.Item>
+      <LanguageSelector />
     </Menu>
   );
 }

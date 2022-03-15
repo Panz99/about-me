@@ -18,6 +18,7 @@
     "react-i18next": "^11.15.7",
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.6",
+    "react-tsparticles": "^1.42.2",
     "semantic-ui-css": "git+https://github.com/Semantic-Org/Semantic-UI-CSS.git",
     "semantic-ui-react": "^2.1.2",
     "typescript": "^4.6.2",
@@ -49,6 +50,8 @@
     ]
   },
   "devDependencies": {
+    "@semantic-ui-react/css-patch": "^1.0.0",
+    "@types/react-scroll": "^1.8.3",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
     "eslint": "^7.32.0",
@@ -59,7 +62,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-react": "^7.29.3",
-    "prettier": "^2.5.1",
-    "@semantic-ui-react/css-patch": "^1.0.0"
+    "prettier": "^2.5.1"
   }
 }

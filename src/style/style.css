@@ -1,11 +1,120 @@
-* {
+/*white  #f5f3f5
+black #302b27 
+blu scuro #1b264f
+azzurro #274690
+azzurrissimo #576ca8*/
+
+body {
+  margin: 0 !important;
+  padding-top: 84px;
+  height: 100vh;
+
+  -moz-osx-font-smoothing: "antialiased";
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+body #root {
+  font-family: "League Spartan", sans-serif;
+}
+
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+
+#navbar {
+  font-family: unset;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  font-weight: bold;
+  height: 84px;
+}
+#navbar .item a {
+  display: inline-block;
+  font-size: 22px;
+  padding: 8px 4px;
+  cursor: pointer;
+  min-width: 140px;
+  background: transparent;
+  text-align: center;
+  color: #f5f3f5;
+  border-radius: 10px;
+}
+#navbar .item a:hover {
+  color: #302b27;
+  background: #f5f3f5;
+}
+#navbar .item .active {
+  color: #302b27;
+  background: #f5f3f5;
+}
+
+#languageSelector {
+  position: absolute;
+  color: #302b27;
+  border: none;
+  background: #f5f3f5;
+  right: 20px;
+  top: 16px;
+}
+#bottombar {
+  font-family: unset;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  font-weight: bold;
+  height: 64px;
+}
+#content {
+  height: calc(100vh - 148px);
+  overflow: auto;
+  -moz-osx-font-smoothing: "antialiased";
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#content .grid {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #fafafa;
-  color: #0f0f0f;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#content::-webkit-scrollbar {
+  display: none;
+}
+h1 {
+  color: #998fc7;
+  font-size: 5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: unset;
+}
+
+.section {
+  height: calc(100vh - 148px);
+  color: #f5f3f5;
+}
+.experiences {
+}
+.home {
+}
+.contacts {
+}
+.projects {
 }

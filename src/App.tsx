@@ -1,24 +1,42 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { Container } from "semantic-ui-react";
+import Contacts from "./components/Contacts";
+import Experiences from "./components/Experience";
+import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
+import { PARTICLES_OPTS } from "./const";
+import Bottombar from "./components/Bottombar";
+import { ISourceOptions, Engine, Container as pContainer } from "tsparticles";
+import Particles from "react-tsparticles";
 
 function App() {
-  const { t, i18n } = useTranslation();
+  const particlesInit = async (main: Engine) => {
+    console.log(main);
+
+    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+  };
+
+  const particlesLoaded = async (container: pContainer) => {
+    console.log(container);
+  };
   return (
-    <div className="app">
+    <>
       <Navbar />
-      <h1>My Site</h1>
-      <h3>{t("contacts")}</h3>
-      <input
-        type="button"
-        onClick={() => {
-          console.log("onclick");
-          if (i18n.language === "it") i18n.changeLanguage("en");
-          else i18n.changeLanguage("it");
-        }}
-        value={i18n.language}
+      <Container name="container" id="content">
+        <Home />
+        <Projects />
+        <Experiences />
+        <Contacts />
+      </Container>
+      <Bottombar />
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={PARTICLES_OPTS as ISourceOptions}
       />
-    </div>
+    </>
   );
 }
 
