@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "semantic-ui-react";
 import Contacts from "./components/Contacts";
 import Experiences from "./components/Experience";
@@ -7,35 +7,30 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import { PARTICLES_OPTS } from "./const";
 import Bottombar from "./components/Bottombar";
-import { ISourceOptions, Engine, Container as pContainer } from "tsparticles";
+import { ISourceOptions } from "tsparticles";
 import Particles from "react-tsparticles";
+import VerticalBar from "./components/VerticalBar";
+import LanguageSelector from "./components/LanguageSelector";
+import { useMediaQuery } from "react-responsive";
 
 function App() {
-  const particlesInit = async (main: Engine) => {
-    console.log(main);
-
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-  };
-
-  const particlesLoaded = async (container: pContainer) => {
-    console.log(container);
-  };
+  const [sidebarVisible, setSidebarVisible] = useState(false);
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   return (
     <>
-      <Navbar />
+      <LanguageSelector />
+      {!isTabletOrMobile && <Navbar />}
+      {isTabletOrMobile && (
+        <VerticalBar visible={sidebarVisible} setVisible={setSidebarVisible} />
+      )}
       <Container name="container" id="content">
         <Home />
         <Projects />
         <Experiences />
         <Contacts />
       </Container>
-      <Bottombar />
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
-        options={PARTICLES_OPTS as ISourceOptions}
-      />
+      {!isTabletOrMobile && <Bottombar />}
+      <Particles id="tsparticles" options={PARTICLES_OPTS as ISourceOptions} />
     </>
   );
 }

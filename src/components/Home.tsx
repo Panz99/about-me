@@ -1,6 +1,7 @@
 import React from "react";
 import { Element } from "react-scroll";
 import { Grid, GridColumn, Icon, Image } from "semantic-ui-react";
+import "../style/home.css";
 
 export default function Home() {
   return (

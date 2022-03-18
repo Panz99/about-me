@@ -6,7 +6,7 @@ azzurrissimo #576ca8*/
 
 body {
   margin: 0 !important;
-  padding-top: 84px;
+  padding-top: 5em;
   height: 100vh;
 
   -moz-osx-font-smoothing: "antialiased";
@@ -20,6 +20,30 @@ body::-webkit-scrollbar {
 body #root {
   font-family: "League Spartan", sans-serif;
 }
+@media only screen and (max-width: 767px) {
+  body {
+    padding-top: 0em;
+  }
+  #content {
+    height: calc(100vh - 0em) !important;
+    margin: 0px !important;
+    padding: 0px 50px !important;
+  }
+  .section {
+    min-height: calc(100vh - 0em) !important;
+    color: #f5f3f5;
+    padding-bottom: 55px;
+  }
+  #languageSelector {
+    right: 0px !important;
+    padding-left: 10px !important;
+    padding-right: 0.785714em;
+    width: 55px;
+  }
+  #languageSelector > .dropdown.icon {
+    padding-left: 0px !important;
+  }
+}
 
 #tsparticles {
   position: fixed;
@@ -27,23 +51,55 @@ body #root {
   z-index: -1;
 }
 
+#hamburgerBtn {
+  position: absolute;
+  left: 4px;
+  top: 12px;
+  color: #f5f3f5;
+  background: transparent;
+  z-index: 20 !important;
+  transition: left 0.5s ease;
+}
+#hamburgerBtn.open {
+  left: 150px;
+}
+
+#sidebar {
+  width: 240px;
+  font-size: 1.6em;
+}
+#sidebar > .item {
+  padding: 0;
+  margin: 0;
+}
+#sidebar > .item > a {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
 #navbar {
+  z-index: 10 !important;
   font-family: unset;
   background: transparent;
   border: none;
   box-shadow: none;
   display: flex;
   justify-content: center;
-  font-size: large;
+  font-size: 1.2rem;
   font-weight: bold;
-  height: 84px;
+  height: 5em;
+}
+#navbar .item {
+  padding: 0;
+  margin: 0 1em;
 }
 #navbar .item a {
   display: inline-block;
-  font-size: 22px;
-  padding: 8px 4px;
+  padding: 0.5em 0.2em;
   cursor: pointer;
-  min-width: 140px;
+  min-width: 8em;
   background: transparent;
   text-align: center;
   color: #f5f3f5;
@@ -60,12 +116,39 @@ body #root {
 
 #languageSelector {
   position: absolute;
-  color: #302b27;
+  color: #f5f3f5;
   border: none;
-  background: #f5f3f5;
+  background: transparent;
   right: 20px;
-  top: 16px;
+  top: 14px;
+  font-size: 1.2em;
+  z-index: 20 !important;
+  font-weight: bold;
 }
+#languageSelector > .text:not(.default) {
+  color: #f5f3f5;
+  font-weight: unset;
+}
+#languageSelector > div {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+#languageSelector > .menu > .item {
+  color: #f5f3f5 !important;
+  background: transparent !important;
+  font-weight: 400 !important;
+  border: none !important;
+}
+#languageSelector > .menu > .item:hover {
+  text-decoration: underline;
+  font-weight: bold !important;
+}
+#languageSelector > .menu > .item.active {
+  color: #f5f3f5 !important;
+  background: transparent !important;
+}
+
 #bottombar {
   font-family: unset;
   background: transparent;
@@ -73,13 +156,18 @@ body #root {
   box-shadow: none;
   display: flex;
   justify-content: center;
-  font-size: large;
+  font-size: 1em;
   font-weight: bold;
-  height: 64px;
+  min-height: 2.5em;
 }
+#bottombar > div {
+  padding: 0;
+}
+
 #content {
-  height: calc(100vh - 148px);
-  overflow: auto;
+  height: calc(100vh - 5em - 2.5em);
+  overflow-y: auto;
+  overflow-x: hidden;
   -moz-osx-font-smoothing: "antialiased";
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -93,10 +181,7 @@ body #root {
 #content::-webkit-scrollbar {
   display: none;
 }
-h1 {
-  color: #998fc7;
-  font-size: 5rem;
-}
+
 h1,
 h2,
 h3,
@@ -107,7 +192,7 @@ h6 {
 }
 
 .section {
-  height: calc(100vh - 148px);
+  min-height: calc(100vh - 5em - 2.5em);
   color: #f5f3f5;
 }
 .experiences {
