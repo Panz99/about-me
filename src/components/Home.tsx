@@ -6,7 +6,7 @@ import "../style/home.css";
 export default function Home() {
   return (
     <Element name="home" className="section home">
-      <Grid columns={2} stackable centered>
+      <Grid columns={2} stackable centered verticalAlign="middle">
         <GridColumn textAlign="center" verticalAlign="middle">
           <Image
             src="https://icon-library.com/images/avatar-icon-png/avatar-icon-png-25.jpg"
@@ -37,6 +37,10 @@ export default function Home() {
             >
               Front-end developer
             </h2>
+            <div>
+              Ciao, mi chiamo Giacomo Sassaro e mi occupo di sviluppo software.
+              In particolare front-end mobile e web
+            </div>
           </div>
         </GridColumn>
       </Grid>

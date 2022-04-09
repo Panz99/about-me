@@ -1,7 +1,9 @@
 import React from "react";
+import { HideScroll } from "react-hide-on-scroll";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
 import { Button, Menu, Sidebar } from "semantic-ui-react";
+import LanguageSelectorInline from "./LanguageSelectorInline";
 
 export default function VerticalBar(props: {
   visible: boolean;
@@ -10,14 +12,14 @@ export default function VerticalBar(props: {
   const { t } = useTranslation();
   return (
     <>
-      {
+      <HideScroll variant="down">
         <Button
           id="hamburgerBtn"
           icon={"bars"}
           size="huge"
           onClick={() => props.setVisible(!props.visible)}
         />
-      }
+      </HideScroll>
       <Sidebar
         id="sidebar"
         as={Menu}
@@ -36,9 +38,8 @@ export default function VerticalBar(props: {
             onClick={() => props.setVisible(false)}
             to="home"
             activeClass="active"
-            offset={-55}
             duration={200}
-            containerId="content"
+            //containerId="content"
             smooth={true}
             spy={true}
           >
@@ -49,10 +50,9 @@ export default function VerticalBar(props: {
           <Link
             onClick={() => props.setVisible(false)}
             to="projects"
-            offset={-55}
             activeClass="active"
             duration={200}
-            containerId="content"
+            //containerId="content"
             smooth={true}
             spy={true}
           >
@@ -62,11 +62,10 @@ export default function VerticalBar(props: {
         <Menu.Item>
           <Link
             onClick={() => props.setVisible(false)}
-            offset={-55}
             to="experiences"
             activeClass="active"
             duration={200}
-            containerId="content"
+            //containerId="content"
             smooth={true}
             spy={true}
           >
@@ -77,16 +76,28 @@ export default function VerticalBar(props: {
           <Link
             onClick={() => props.setVisible(false)}
             to="contacts"
-            offset={-55}
             activeClass="active"
             duration={200}
-            containerId="content"
+            //containerId="content"
             smooth={true}
             spy={true}
           >
             {t("contacts")}
           </Link>
         </Menu.Item>
+        <div style={{ marginTop: 18 }}>
+          <LanguageSelectorInline />
+        </div>
+        <small
+          style={{
+            color: "#f5f3f5",
+            position: "absolute",
+            bottom: 5,
+            left: 70,
+          }}
+        >
+          © Giacomo Sassaro
+        </small>
       </Sidebar>
     </>
   );

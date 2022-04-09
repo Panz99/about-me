@@ -1,5 +1,3 @@
-export const NAV_HEIGHT = 84;
-
 export const PARTICLES_OPTS = {
   fpsLimit: 60,
   background: {
