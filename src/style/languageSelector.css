@@ -1,0 +1,55 @@
+#languageSelector {
+    position: absolute;
+    color: #f5f3f5;
+    border: none;
+    background: transparent;
+    right: 20px;
+    top: 14px;
+    font-size: 1.2rem;
+    z-index: 20 !important;
+    font-weight: bold;
+}
+
+#languageSelector>.text:not(.default) {
+    color: #f5f3f5;
+    font-weight: unset;
+}
+
+#languageSelector>div {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#languageSelector>.menu>.item {
+    color: #f5f3f5 !important;
+    background: transparent !important;
+    font-weight: 400 !important;
+    border: none !important;
+}
+
+#languageSelector>.menu>.item:hover {
+    text-decoration: underline;
+    font-weight: bold !important;
+}
+
+#languageSelector>.menu>.item.active {
+    color: #f5f3f5 !important;
+    background: transparent !important;
+}
+
+#languageSelectorInline>.inverted.button {
+    color: #f5f3f5;
+    font-weight: bold;
+}
+
+#languageSelectorInline>.inverted.button:focus {
+    color: #302b27
+}
+
+#languageSelectorInline>.inverted.button.active {
+    color: #302b27;
+    font-weight: bold;
+    background: #f5f3f5;
+    box-shadow: unset !important;
+}
