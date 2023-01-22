@@ -1694,6 +1694,13 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@smakss/react-scroll-direction@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@smakss/react-scroll-direction/-/react-scroll-direction-1.0.4.tgz#f5ac309f36cbafafb7b23794e9673dd5378eb647"
+  integrity sha512-ffDsggfTDy+1QDaQSBM/Myh6TLxxicwmVDTL/EDaie0wzLPubg75KvHGJUG1I9DbUCTBW4S5iII90XR9UYsx8Q==
+  dependencies:
+    prop-types "^15.8.1"
+
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-2.2.3.tgz#ee34985952ca21558ab0d952f00298ad2190c053"

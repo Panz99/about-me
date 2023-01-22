@@ -1,10 +1,7 @@
 
-.home h1 {
-  color: #998fc7;
-  font-size: 5rem;
-}
+
 .home{
-  background-image: url("../images/bg2.jpg");
+   background-image: url("../images/test1.png");
   background-repeat: no-repeat, no-repeat;
-  background-size: cover;
+  background-size: cover; 
 }

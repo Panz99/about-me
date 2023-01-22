@@ -6,6 +6,12 @@ import { scroller, animateScroll } from "react-scroll";
 import { Menubar } from "primereact/menubar";
 import { Image } from "primereact/image";
 import logo from "../images/logo.jpg";
+import { classNames } from "primereact/utils";
+import {
+  ScrollDirection,
+  useScrollDirection,
+} from "../hooks/useScrollDirection";
+import "../style/navbar.css";
 const items = [
   {
     label: "Home",
@@ -41,30 +47,19 @@ const items = [
   },
 ];
 export default function Navbar() {
-  const [sticked, setSticked] = useState(false);
+  const scrollDir = useScrollDirection({ threshold: 100 });
 
-  useEffect(() => {
-    const changeBackground = () => {
-      console.log(window.scrollY);
-      if (window.scrollY >= 100) {
-        setSticked(true);
-      } else {
-        setSticked(false);
-      }
-    };
-    // adding the event when scroll change background
-    window.addEventListener("scroll", changeBackground);
-    return () => window.removeEventListener("scroll", changeBackground);
-  });
   const { t } = useTranslation();
 
   return (
     <Menubar
+      id="navbar"
       start={<Image src={logo} alt="Logo" width="50" height="50" />}
       model={items}
-      className={`fixed top-0 w-full border-none border-noround justify-content-between ${
-        !sticked ? "bg-white-alpha-10" : "bg-blue-500"
-      }`}
+      className={classNames({
+        scrollUp: scrollDir == ScrollDirection.up,
+        scrollDown: scrollDir == ScrollDirection.down,
+      })}
     />
   );
 }

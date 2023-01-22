@@ -9,7 +9,6 @@ import Projects from "./components/Projects";
 import { useMediaQuery } from "react-responsive";
 
 function App() {
-  const [sidebarVisible, setSidebarVisible] = useState(false);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   return (
     <div className="flex flex-column">
