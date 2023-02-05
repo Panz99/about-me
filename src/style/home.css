@@ -1,7 +1,17 @@
 
 
 .home{
-   background-image: url("../images/test1.png");
+   /* background-image: url("../images/test1.png");
   background-repeat: no-repeat, no-repeat;
-  background-size: cover; 
+  background-size: cover;  */
+}
+.home .intro{
+  font-size: clamp(16px, 5vw, 20px);
+}
+.home .title{
+  font-size: clamp(40px, 8vw, 80px);
+}
+.home .subtitle{
+  font-size: clamp(40px, 8vw, 80px);
+  line-height: .9;
 }

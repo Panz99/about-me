@@ -16,8 +16,7 @@
     height: 100px;
     border: unset;
     border-radius: unset;
-    justify-content: space-between;
-    background-color: rgba(35, 35, 44, 0.85);
+    background-color: rgba(17, 29, 19, 0.85);
     backdrop-filter: blur(10px);
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     z-index: 12;
@@ -29,14 +28,14 @@
 #navbar.scrollDown {
     height: 70px;
     transform: translateY(calc(70px * -1));
-    box-shadow: 0 10px 30px -10px rgba(27,22, 24, 0.7);
+    box-shadow: 0 10px 30px -10px rgba(1, 19, 4, 0.7);
 }
 
 #navbar.scrollUp {
     height: 70px;
     transform: translateY(0px);
-    box-shadow: 0 10px 30px -10px rgba(27,22,24, 0.7);
-    background-color: rgba(35, 35, 44, 0.85);
+    box-shadow: 0 10px 30px -10px rgba(1, 19, 4, 0.7);
+    background-color: rgba(17, 29, 19, 0.85);
 }
 #navbar .p-menubar-button{
     width: 3rem;
@@ -45,4 +44,34 @@
 
 #navbar .p-menubar-button .pi{
     font-size: 2rem;
+}
+
+#navbar.p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-link:not(.p-disabled):hover{
+    background: unset;
+    
+}
+
+#navbar.p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-link:not(.p-disabled):hover .p-menuitem-text{
+    color: var(--primary-color) !important;
+}
+
+#navbar.p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-link:focus{
+    box-shadow: unset;
+}
+
+#navbar.p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-link:focus .p-menuitem-text{
+    color: var(--primary-color) !important;
+}
+
+#navbar.p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-link{
+    min-width: 100px;
+}
+
+#navbar.p-menubar .p-menubar-custom, #navbar.p-menubar .p-menubar-end{
+    margin-left: unset;
+}
+#navbar.p-menubar .p-menubar-root-list{
+    margin-left: auto;
+    flex-grow: 1;
+    justify-content: flex-end;
 }

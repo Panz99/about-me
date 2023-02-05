@@ -5,6 +5,11 @@ import { initReactI18next } from "react-i18next";
 import translationIT from "./italian.json";
 import translationEN from "./english.json";
 
+export enum Language {
+  EN = "en",
+  IT = "it",
+}
+
 // the translations
 const resources = {
   en: {

@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 //import Bottombar from "./components/Bottombar";
 //import VerticalBar from "./components/VerticalBar";
 import { useMediaQuery } from "react-responsive";
+import About from "./components/About";
 
 function App() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
@@ -22,6 +23,7 @@ function App() {
         <VerticalBar visible={sidebarVisible} setVisible={setSidebarVisible} />
       )} */}
       <Home />
+      <About />
       <Projects />
       <Experiences />
       <Contacts />
