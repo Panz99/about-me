@@ -6,6 +6,11 @@
 @media only screen and (max-width: 768px) {
     #navbar.p-menubar {
         padding: 0 25px !important;
+        display: flex;
+        justify-content: space-between;
+    }
+    .p-menubar-end{
+        display: none;
     }
 }
 
@@ -29,6 +34,9 @@
     height: 70px;
     transform: translateY(calc(70px * -1));
     box-shadow: 0 10px 30px -10px rgba(1, 19, 4, 0.7);
+}
+#navbar.scrollDown .p-menubar-root-list{
+    display: none;
 }
 
 #navbar.scrollUp {

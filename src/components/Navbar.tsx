@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 //import { Menu } from "semantic-ui-react";
 //import LanguageSelector from "./LanguageSelector";
@@ -68,6 +68,7 @@ export default function Navbar() {
           alt="Logo"
           width="50"
           height="50"
+          style={{ height: 50, display: "block" }}
           onClick={() =>
             animateScroll.scrollToTop({
               duration: 200,
